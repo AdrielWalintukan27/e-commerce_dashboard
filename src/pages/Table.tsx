@@ -38,10 +38,19 @@ export function Table({ data }: TableProps) {
 
     // Apply Search Filter
     if (searchTerm) {
-      result = result.filter(item => 
-        item.customer.toLowerCase().includes(searchTerm.toLowerCase()) || 
-        item.product.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      const lowerSearch = searchTerm.toLowerCase();
+      result = result.filter(item => {
+        const formattedDate = new Date(item.date).toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric'
+        }).toLowerCase();
+
+        return item.customer.toLowerCase().includes(lowerSearch) || 
+               item.product.toLowerCase().includes(lowerSearch) ||
+               item.date.includes(lowerSearch) ||
+               formattedDate.includes(lowerSearch) ||
+               item.amount.toString().includes(lowerSearch);
+      });
     }
     
     return result;

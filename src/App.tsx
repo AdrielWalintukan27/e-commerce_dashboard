@@ -93,23 +93,25 @@ function App() {
 
       {/* Insight & Recommendation Assignment Section */}
       <section className="kpi-grid" style={{ marginTop: '4px' }}>
-        <div className="kpi-card dark-card">
-          <h4 style={{ margin: '0 0 8px 0', fontSize: '13px', color: '#F3F4F6', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Insight Utama</h4>
-          <p style={{ margin: 0, fontSize: '13px', color: '#9CA3AF', lineHeight: 1.6 }}>
-            Kategori Electronics mendominasi pendapatan (38%). Produk unggulan sepenuhnya diisi oleh gadget.
-          </p>
-        </div>
-        <div className="kpi-card dark-card">
-          <h4 style={{ margin: '0 0 8px 0', fontSize: '13px', color: '#F3F4F6', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Tren Penjualan</h4>
-          <p style={{ margin: 0, fontSize: '13px', color: '#9CA3AF', lineHeight: 1.6 }}>
-            Penjualan menanjak progresif dan memuncak di bulan Juni, lalu mengalami koreksi ringan di bulan Juli.
+        <div className="kpi-card dark-card" style={{ gridColumn: 'span 2' }}>
+          <h4 style={{ margin: '0 0 8px 0', fontSize: '13px', color: '#F3F4F6', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Insight Utama Ekosistem Bisnis</h4>
+          <p style={{ margin: 0, fontSize: '13px', color: '#9CA3AF', lineHeight: 1.7, textAlign: 'justify' }}>
+            Berdasarkan agregasi data keseluruhan, ekosistem penjualan didominasi sangat kuat oleh produk teknologi perangkat keras. Kategori <strong>Electronics</strong> menjadi tulang punggung utama dengan kontribusi omzet mencapai <strong>38%</strong>, diikuti pengikut setianya di sektor <strong>Fashion (27%)</strong>. Ketika dibedah lebih jauh melalui komparasi produk individual, <em>Smartwatch</em> (140 Unit Terjual) dan <em>Gaming Mouse</em> (125 Unit Terjual) justru menempati kasta tertinggi melampaui perangkat tradisional seperti <em>Smartphone</em>. Hal ini menjadi indikator vital bahwa demografi pembeli utama platform ini didominasi oleh kalangan pekerja modern atau komunitas <em>gamers</em> yang aktif berburu suku cadang komplementer.
           </p>
         </div>
         <div className="kpi-card dark-card" style={{ gridColumn: 'span 2' }}>
-          <h4 style={{ margin: '0 0 8px 0', fontSize: '13px', color: '#F3F4F6', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Rekomendasi Strategis</h4>
-          <p style={{ margin: 0, fontSize: '13px', color: '#9CA3AF', lineHeight: 1.6 }}>
-            Prioritaskan stok untuk lini Electronics (terutama Smartphone & Headphone). Pertimbangkan meluncurkan diskon <i>bundling</i> akhir musim di kuartal berikutnya untuk mencegah penurunan lanjutan pasca bulan Juni.
+          <h4 style={{ margin: '0 0 8px 0', fontSize: '13px', color: '#F3F4F6', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Analisis Tren Penjualan Tahunan</h4>
+          <p style={{ margin: 0, fontSize: '13px', color: '#9CA3AF', lineHeight: 1.7, textAlign: 'justify' }}>
+            Kurva stabilitas tren menunjukkan fundamental performa yang amat sehat. Meskipun sempat memulai Kuartal 1 dengan stagnasi yang moderat (Rp 2,5 juta), lintasan omzet menanjak naik hingga menebus level resistensi pertama di pertengahan tahun (Rp 4,2 juta di bulan Juni). Secara luar biasa, momentum <em>bullish</em> kembali meledak pasca September dan mencapai titik keemasan absolut atau <em>All-Time High</em> pada siklus <strong>Desember dengan omzet fantastis Rp 7.200.000</strong>. Pola grafik musiman seperti ini mengkonfirmasi eksistensi sentimen konsumerisme liburan panjang akhir tahun.
           </p>
+        </div>
+        <div className="kpi-card dark-card" style={{ gridColumn: 'span 4' }}>
+          <h4 style={{ margin: '0 0 12px 0', fontSize: '13px', color: '#F3F4F6', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Rumusan Rekomendasi Strategis</h4>
+          <ul style={{ margin: 0, paddingLeft: '16px', fontSize: '13px', color: '#9CA3AF', lineHeight: 1.6, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <li><strong>Penguatan Rantai Pasok Kuartal ke-4:</strong> Fokuskan injeksi anggaran modal guna pemenuhan stok ruang gudang secara agresif sedari bulan Oktober, dikhususkan untuk inventaris gawai <em>peripherals</em> (Mouse, Keyboard, Smartwatch) sebagai mitigasi pencegahan <em>out-of-stock</em> jelang momentum bulan Desember.</li>
+            <li><strong>Eksekusi Paket <em>Bundling</em>:</strong> Menerapkan taktik penetapan harga rakitan; menumpang jual produk dengan utilitas lambat (seperti <em>Backpack / Tas</em>) secara sepaket dengan produk pemicu primadona (contoh: Pembelian <em>Laptop</em> + Tas diskon 30%) untuk mengamankan <em>Average Order Value</em> pengguna ke tingkatan maksimal.</li>
+            <li><strong>Penyelarasan Roda Promosi (Campaign):</strong> Mulai memanaskan algoritma iklan digital dan kampanye periklanan secara bertahap (<em>soft-selling</em>) semenjak bulan Agustus guna menabung sentimen ketertarikan masyarakat sedini mungkin sebelum mereka menghamburkan uangnya saat tunjangan liburan tiba.</li>
+          </ul>
         </div>
       </section>
     </div>
