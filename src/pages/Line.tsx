@@ -90,7 +90,7 @@ export function LineChartComponent({ data }: ChartProps) {
                {isDropdownOpen && (
                  <div style={{
                    position: 'absolute', top: '100%', right: '0', marginTop: '8px', 
-                   background: '#1B1D20', border: '1px solid #374151', borderRadius: '8px', 
+                   background: 'var(--card-bg)', border: '1px solid var(--border-color)', borderRadius: '8px', 
                    padding: '6px', zIndex: 50, display: 'flex', flexDirection: 'column', gap: '2px',
                    minWidth: '120px', maxHeight: '180px', overflowY: 'auto', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.5)'
                  }}>
@@ -99,8 +99,8 @@ export function LineChartComponent({ data }: ChartProps) {
                        key={m.index}
                        onClick={() => { setEndMonthIndex(m.index); setIsDropdownOpen(false); }} 
                        style={{
-                         background: endMonthIndex === m.index ? 'rgba(110, 231, 183, 0.1)' : 'transparent', 
-                         color: endMonthIndex === m.index ? '#6EE7B7' : '#F3F4F6', 
+                         background: endMonthIndex === m.index ? 'rgba(16, 185, 129, 0.1)' : 'transparent', 
+                         color: endMonthIndex === m.index ? 'var(--primary-color)' : 'var(--text-primary)', 
                          border: 'none', padding: '8px 12px', textAlign: 'left', cursor: 'pointer', borderRadius: '4px', fontSize: '13px'
                        }}
                      >
@@ -112,25 +112,25 @@ export function LineChartComponent({ data }: ChartProps) {
              </div>
            )}
 
-           <div style={{ display: 'flex', gap: '8px' }}>
-             <button style={getBtnStyle(timeframe === '1M')} onClick={() => setTimeframe('1M')}>1M</button>
-             <button style={getBtnStyle(timeframe === '6M')} onClick={() => setTimeframe('6M')}>6M</button>
-             <button style={getBtnStyle(timeframe === '1Y')} onClick={() => setTimeframe('1Y')}>1Y</button>
+           <div style={{ display: 'flex', gap: '8px', background: 'var(--bg-color)', padding: '4px', borderRadius: '6px', border: '1px solid var(--border-color)' }}>
+             <button style={{...getBtnStyle(timeframe === '1M'), background: timeframe === '1M' ? 'var(--card-border)' : 'transparent', color: timeframe === '1M' ? 'var(--text-primary)' : 'var(--text-secondary)'}} onClick={() => setTimeframe('1M')}>1M</button>
+             <button style={{...getBtnStyle(timeframe === '6M'), background: timeframe === '6M' ? 'var(--card-border)' : 'transparent', color: timeframe === '6M' ? 'var(--text-primary)' : 'var(--text-secondary)'}} onClick={() => setTimeframe('6M')}>6M</button>
+             <button style={{...getBtnStyle(timeframe === '1Y'), background: timeframe === '1Y' ? 'var(--card-border)' : 'transparent', color: timeframe === '1Y' ? 'var(--text-primary)' : 'var(--text-secondary)'}} onClick={() => setTimeframe('1Y')}>1Y</button>
            </div>
          </div>
       </div>
       <div className="chart-wrapper">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={filteredData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-            <CartesianGrid strokeDasharray="3 3" vertical={true} horizontal={false} stroke="#2B2F36" />
-            <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{fill: '#6B7280', fontSize: 11}} dy={10} />
-            <YAxis axisLine={false} tickLine={false} tick={{fill: '#6B7280', fontSize: 11}} width={80} tickFormatter={formatYAxis} />
+            <CartesianGrid strokeDasharray="3 3" vertical={true} horizontal={false} stroke="var(--card-border)" />
+            <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{fill: 'var(--text-secondary)', fontSize: 11}} dy={10} />
+            <YAxis axisLine={false} tickLine={false} tick={{fill: 'var(--text-secondary)', fontSize: 11}} width={80} tickFormatter={formatYAxis} />
             <Tooltip
               formatter={formatTooltip}
-              contentStyle={{ backgroundColor: '#2B2F36', borderColor: '#374151', borderRadius: '8px', color: '#F3F4F6', fontSize: '13px' }}
-              itemStyle={{ color: '#6EE7B7' }}
+              contentStyle={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--border-color)', borderRadius: '8px', color: 'var(--text-primary)', fontSize: '13px' }}
+              itemStyle={{ color: 'var(--primary-color)' }}
             />
-            <Line type="linear" dataKey="sales" stroke="#6EE7B7" strokeWidth={2} dot={false} activeDot={{ r: 4, fill: '#6EE7B7', stroke: '#1B1D20', strokeWidth: 2 }} />
+            <Line type="linear" dataKey="sales" stroke="var(--primary-color)" strokeWidth={2} dot={false} activeDot={{ r: 4, fill: 'var(--primary-color)', stroke: 'var(--card-bg)', strokeWidth: 2 }} />
           </LineChart>
         </ResponsiveContainer>
       </div>

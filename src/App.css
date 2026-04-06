@@ -14,6 +14,20 @@
 
   --positive-color: #10B981;
   --negative-color: #EF4444;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root.light-mode {
+  --bg-color: #F8FAFC;
+  --card-bg: #FFFFFF;
+  --card-border: #E2E8F0;
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --border-color: #CBD5E1;
+  
+  --positive-color: #059669;
+  --negative-color: #E11D48;
 }
 
 body {

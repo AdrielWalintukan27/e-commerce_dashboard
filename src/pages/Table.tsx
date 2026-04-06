@@ -58,24 +58,24 @@ export function Table({ data }: TableProps) {
 
   return (
     <div className="chart-container dark-card" style={{ padding: '0', display: 'flex', flexDirection: 'column', height: '100%', minHeight: '380px' }}>
-      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px', borderBottom: '1px solid #2B2F36'}}>
+      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px', borderBottom: '1px solid var(--border-color)'}}>
         <h3 style={{margin: 0}}>Detail Transaksi (Table)</h3>
         
         <div style={{display: 'flex', gap: '12px', alignItems: 'center'}}>
            {/* Search Input */}
            <div style={{ position: 'relative' }}>
-             <svg style={{ position: 'absolute', left: '10px', top: '7px', color: '#9CA3AF' }} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+             <svg style={{ position: 'absolute', left: '10px', top: '7px', color: 'var(--text-secondary)' }} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
              <input
                type="text"
                placeholder="Cari transaksi..."
                value={searchTerm}
                onChange={(e) => setSearchTerm(e.target.value)}
                style={{
-                 background: '#18181A',
-                 border: '1px solid #374151',
+                 background: 'var(--bg-color)',
+                 border: '1px solid var(--border-color)',
                  padding: '6px 14px 6px 30px',
                  borderRadius: '6px',
-                 color: '#F3F4F6',
+                 color: 'var(--text-primary)',
                  outline: 'none',
                  fontSize: '12px',
                  width: '140px'
@@ -89,9 +89,9 @@ export function Table({ data }: TableProps) {
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             title="Filter Transaksi"
             style={{
-              background: filterMode !== 'ALL' ? 'rgba(110, 231, 183, 0.1)' : 'transparent', 
-              border: `1px solid ${filterMode !== 'ALL' ? '#6EE7B7' : '#374151'}`, 
-              color: filterMode !== 'ALL' ? '#6EE7B7' : '#9CA3AF', 
+              background: filterMode !== 'ALL' ? 'rgba(16, 185, 129, 0.1)' : 'transparent', 
+              border: `1px solid ${filterMode !== 'ALL' ? 'var(--primary-color)' : 'var(--border-color)'}`, 
+              color: filterMode !== 'ALL' ? 'var(--primary-color)' : 'var(--text-secondary)', 
               borderRadius: '4px', padding: '4px 12px', fontSize: '12px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px'
             }}
           >
@@ -102,13 +102,13 @@ export function Table({ data }: TableProps) {
           {isDropdownOpen && (
             <div style={{
               position: 'absolute', top: '100%', right: '0', marginTop: '8px', 
-              background: '#1B1D20', border: '1px solid #374151', borderRadius: '8px', 
+              background: 'var(--card-bg)', border: '1px solid var(--border-color)', borderRadius: '8px', 
               padding: '6px', zIndex: 50, display: 'flex', flexDirection: 'column', gap: '2px',
               minWidth: '160px', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.5)'
             }}>
-              <button onClick={() => {setFilterMode('ALL'); setIsDropdownOpen(false);}} style={{background: 'transparent', color: filterMode === 'ALL' ? '#6EE7B7' : '#F3F4F6', border: 'none', padding: '8px 12px', textAlign: 'left', cursor: 'pointer', borderRadius: '4px', fontSize: '13px'}}>Semua Transaksi</button>
-              <button onClick={() => {setFilterMode('HIGH'); setIsDropdownOpen(false);}} style={{background: 'transparent', color: filterMode === 'HIGH' ? '#6EE7B7' : '#F3F4F6', border: 'none', padding: '8px 12px', textAlign: 'left', cursor: 'pointer', borderRadius: '4px', fontSize: '13px'}}>Nilai &gt; 2 Juta</button>
-              <button onClick={() => {setFilterMode('LOW'); setIsDropdownOpen(false);}} style={{background: 'transparent', color: filterMode === 'LOW' ? '#6EE7B7' : '#F3F4F6', border: 'none', padding: '8px 12px', textAlign: 'left', cursor: 'pointer', borderRadius: '4px', fontSize: '13px'}}>Nilai &lt; 2 Juta</button>
+              <button onClick={() => {setFilterMode('ALL'); setIsDropdownOpen(false);}} style={{background: 'transparent', color: filterMode === 'ALL' ? 'var(--primary-color)' : 'var(--text-primary)', border: 'none', padding: '8px 12px', textAlign: 'left', cursor: 'pointer', borderRadius: '4px', fontSize: '13px'}}>Semua Transaksi</button>
+              <button onClick={() => {setFilterMode('HIGH'); setIsDropdownOpen(false);}} style={{background: 'transparent', color: filterMode === 'HIGH' ? 'var(--primary-color)' : 'var(--text-primary)', border: 'none', padding: '8px 12px', textAlign: 'left', cursor: 'pointer', borderRadius: '4px', fontSize: '13px'}}>Nilai &gt; 2 Juta</button>
+              <button onClick={() => {setFilterMode('LOW'); setIsDropdownOpen(false);}} style={{background: 'transparent', color: filterMode === 'LOW' ? 'var(--primary-color)' : 'var(--text-primary)', border: 'none', padding: '8px 12px', textAlign: 'left', cursor: 'pointer', borderRadius: '4px', fontSize: '13px'}}>Nilai &lt; 2 Juta</button>
             </div>
           )}
         </div>
@@ -130,21 +130,21 @@ export function Table({ data }: TableProps) {
               filteredData.map((row) => (
                 <tr key={row.id}>
                   <td style={{fontWeight: 600}}>{row.customer}</td>
-                  <td style={{color: '#9CA3AF'}}>{row.product}</td>
-                  <td style={{color: '#9CA3AF'}}>
+                  <td style={{color: 'var(--text-secondary)'}}>{row.product}</td>
+                  <td style={{color: 'var(--text-secondary)'}}>
                     {new Date(row.date).toLocaleDateString('en-US', {
                       month: 'short',
                       day: 'numeric'
                     })}
                   </td>
-                  <td style={{textAlign: 'right', fontFamily: 'monospace', fontSize: '13px', color: '#6EE7B7'}}>
+                  <td style={{textAlign: 'right', fontFamily: 'monospace', fontSize: '13px', color: 'var(--primary-color)'}}>
                     {row.amount.toLocaleString('id-ID')}
                   </td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan={4} style={{textAlign: 'center', padding: '24px', color: '#9CA3AF'}}>
+                <td colSpan={4} style={{textAlign: 'center', padding: '24px', color: 'var(--text-secondary)'}}>
                   Tidak ada data ditemukan.
                 </td>
               </tr>

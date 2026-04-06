@@ -77,17 +77,17 @@ export function BarChartComponent({ data }: ChartProps) {
               dataKey="name"
               axisLine={false}
               tickLine={false}
-              tick={{ fill: '#9CA3AF', fontSize: 13 }}
+              tick={{ fill: 'var(--text-secondary)', fontSize: 13 }}
               width={100}
             />
             <Tooltip
               formatter={formatTooltip}
-              cursor={{ fill: 'rgba(255,255,255,0.03)' }}
-              contentStyle={{ backgroundColor: '#2B2F36', borderColor: '#374151', borderRadius: '8px', color: '#F3F4F6', fontSize: '13px' }}
-              itemStyle={{ color: '#6EE7B7' }}
+              cursor={{ fill: 'rgba(110,231,183,0.05)' }}
+              contentStyle={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--border-color)', borderRadius: '8px', color: 'var(--text-primary)', fontSize: '13px' }}
+              itemStyle={{ color: 'var(--primary-color)' }}
             />
-            <Bar dataKey="sales" fill="#6EE7B7" radius={[0, 4, 4, 0]} barSize={16}>
-              <LabelList dataKey="sales" position="right" fill="#F3F4F6" fontSize={11} formatter={formatLabel} />
+            <Bar dataKey="sales" fill="var(--primary-color)" radius={[0, 4, 4, 0]} barSize={16}>
+              <LabelList dataKey="sales" position="right" fill="var(--text-primary)" fontSize={11} formatter={formatLabel} />
             </Bar>
           </BarChart>
         </ResponsiveContainer>
