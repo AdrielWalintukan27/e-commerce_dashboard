@@ -1,50 +1,72 @@
 {
   "summary": {
-    "totalSales": 12500000,
-    "totalOrders": 320,
-    "totalCustomers": 210,
-    "totalProducts": 85
+    "totalSales": 21475000,
+    "totalOrders": 486,
+    "totalCustomers": 312,
+    "totalProducts": 128
   },
   "salesTrend": [
-    { "month": "Jan", "sales": 1200000 },
-    { "month": "Feb", "sales": 1500000 },
-    { "month": "Mar", "sales": 1800000 },
-    { "month": "Apr", "sales": 2000000 },
-    { "month": "May", "sales": 1700000 }
+    { "month": "Jan", "sales": 2500000 },
+    { "month": "Feb", "sales": 2700000 },
+    { "month": "Mar", "sales": 3200000 },
+    { "month": "Apr", "sales": 3000000 },
+    { "month": "May", "sales": 3600000 },
+    { "month": "Jun", "sales": 4200000 },
+    { "month": "Jul", "sales": 3900000 },
+    { "month": "Aug", "sales": 4500000 },
+    { "month": "Sep", "sales": 5100000 },
+    { "month": "Oct", "sales": 4800000 },
+    { "month": "Nov", "sales": 5800000 },
+    { "month": "Dec", "sales": 7200000 }
   ],
   "categoryDistribution": [
-    { "category": "Electronics", "value": 40 },
-    { "category": "Clothing", "value": 25 },
-    { "category": "Shoes", "value": 20 },
-    { "category": "Accessories", "value": 15 }
+    {
+      "category": "Electronics",
+      "value": 38
+    },
+    {
+      "category": "Fashion",
+      "value": 27
+    },
+    {
+      "category": "Home Living",
+      "value": 18
+    },
+    {
+      "category": "Sports",
+      "value": 10
+    },
+    {
+      "category": "Beauty",
+      "value": 7
+    }
   ],
   "topProducts": [
-    { "name": "Laptop", "sales": 50 },
-    { "name": "T-Shirt", "sales": 80 },
-    { "name": "Sneakers", "sales": 65 },
-    { "name": "Watch", "sales": 40 }
+    { "name": "Smartphone", "sales": 110 },
+    { "name": "Laptop", "sales": 95 },
+    { "name": "Running Shoes", "sales": 88 },
+    { "name": "Jacket", "sales": 82 },
+    { "name": "Headphones", "sales": 105 },
+    { "name": "Smartwatch", "sales": 140 },
+    { "name": "Gaming Mouse", "sales": 125 },
+    { "name": "Mechanical Keyboard", "sales": 92 },
+    { "name": "Bluetooth Speaker", "sales": 75 },
+    { "name": "Backpack", "sales": 60 }
   ],
   "recentTransactions": [
-    {
-      "id": 1,
-      "customer": "Andi",
-      "product": "Laptop",
-      "amount": 7000000,
-      "date": "2026-03-01"
-    },
-    {
-      "id": 2,
-      "customer": "Budi",
-      "product": "Sneakers",
-      "amount": 900000,
-      "date": "2026-03-03"
-    },
-    {
-      "id": 3,
-      "customer": "Siti",
-      "product": "T-Shirt",
-      "amount": 150000,
-      "date": "2026-03-05"
-    }
+    { "id": 1, "customer": "Rina", "product": "Smartphone", "amount": 4500000, "date": "2026-01-15" },
+    { "id": 2, "customer": "Doni", "product": "Laptop", "amount": 7200000, "date": "2026-02-03" },
+    { "id": 3, "customer": "Sari", "product": "Jacket", "amount": 850000, "date": "2026-03-12" },
+    { "id": 4, "customer": "Fajar", "product": "Headphones", "amount": 950000, "date": "2026-04-08" },
+    { "id": 5, "customer": "Lina", "product": "Running Shoes", "amount": 1200000, "date": "2026-05-21" },
+    { "id": 6, "customer": "Andi", "product": "Smartphone", "amount": 4800000, "date": "2026-06-02" },
+    { "id": 7, "customer": "Kevin", "product": "Smartwatch", "amount": 2500000, "date": "2026-07-10" },
+    { "id": 8, "customer": "Budi", "product": "Gaming Mouse", "amount": 600000, "date": "2026-08-15" },
+    { "id": 9, "customer": "Citra", "product": "Mechanical Keyboard", "amount": 1500000, "date": "2026-09-01" },
+    { "id": 10, "customer": "Diana", "product": "Laptop", "amount": 8500000, "date": "2026-10-12" },
+    { "id": 11, "customer": "Eko", "product": "Bluetooth Speaker", "amount": 1100000, "date": "2026-11-20" },
+    { "id": 12, "customer": "Gilang", "product": "Smartphone", "amount": 5000000, "date": "2026-12-05" },
+    { "id": 13, "customer": "Hani", "product": "Backpack", "amount": 450000, "date": "2026-12-15" },
+    { "id": 14, "customer": "Indra", "product": "Smartwatch", "amount": 3200000, "date": "2026-12-24" }
   ]
 }
